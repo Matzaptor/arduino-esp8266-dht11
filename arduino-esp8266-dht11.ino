@@ -33,7 +33,7 @@ DHT_Unified dht(DHTPIN, DHTTYPE);
 
 const char* ssid   = "Matzaptor Wi-Fi";
 const char* password = "abcde12345";
-const char* hostname = "ESP8266_01";
+const char* hostname = "ESP8266_DHT11";
 
 void initWiFi() {
 	WiFi.mode(WIFI_STA);
@@ -44,8 +44,6 @@ void initWiFi() {
 		Serial.print('.');
 		delay(1000);
 	}
-	Serial.println(WiFi.localIP());
-	Serial.println(WiFi.localIP());
 	Serial.println(WiFi.localIP());
 	//The ESP8266 tries to reconnect automatically when the connection is lost
 	WiFi.setAutoReconnect(true);
